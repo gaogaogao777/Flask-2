@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page</title>
+</head>
+<body>
+    <div style="text-align: center; padding: 20px; background-color: #f0f0f0;">
+        <h1 style="font-size: 24px;">{{ name }}</h1>
+        <h2 style="font-size: 20px;">Last 5 Digits of Student ID: {{ id_last_5_digits }}</h2>
+        {% if picture %}
+            <img src="{{ url_for('static', filename=picture) }}" alt="Your Picture" style="max-width: 200px; max-height: 200px;">
+        {% endif %}
+    </div>
+
+    <!-- Your page content goes here -->
+
+</body>
+</html>
